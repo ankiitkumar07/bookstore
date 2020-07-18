@@ -32,8 +32,8 @@ html, body { height: 100%; }
 body{ 
 	margin: 0; 
 	font-family: "Nunito", sans-serif;
-	background-image: url(/assets/cool-background.png); 
-	color: white;
+	// background-image: url(/assets/cool-background.png); 
+	color: black;
 }
 
 /* Importing Bootstrap SCSS file. */
@@ -42,7 +42,8 @@ body{
 .mat-typography h1 {
 	font-family: "Nunito", sans-serif ;
 	font-size: 4rem;
-	font-weight: 900;
+	font-weight: 100;
+    line-height: 4rem;
 }
 
 button:focus{

@@ -1,38 +1,89 @@
 .container-fluid{
 	flex-direction : column;
 }
-
-img{
-	width: 300px;
-	height: 237px;
+.main-section{
+	width: 100%;
+    height: 729px;
+    position: relative;
+}
+section{
+	overflow: hidden;
+	background-size: cover;
+	background-repeat: no-repeat;
+    min-height: 729px;
+    &:nth-child(1){
+		background-image: url(/assets/wave2.svg);
+    	background-position: 0px 100px;
+    }
+    &:nth-child(2){
+    	background-image: url(/assets/path-1.svg);
+    	background-position: -254px 4px;
+    }
+    &:nth-child(3){
+    	background-image: url(/assets/path-2.svg);
+    	background-position: -254px 400px;
+    }
 }
 
-.home{
-	width: 100%;
-	height: 100%;
-	
-	& h1{
-		margin-left: 36px;
-		font: 400 20px/32px "Nunito", sans-serif !important;
-		& span{
-			font-size: 55px;
-			margin: 0 15px;
-		}
+h1{
+	text-align: end;
+	.order-2 > & {
+		text-align: left;
 	}
 }
 
+img.img-thumbnail{
+	background-color: transparent;
+	border: none;
+}
+.min-height{
+	min-height: 729px;
+}
+.wrapped-heading{
+    position: absolute;
+    top: 50%;
+    left: 24%;
+    width: 25%;
+    text-align: end;
+
+
+	& h1{
+		margin-left: 36px;
+		font: 400 35px/32px "Nunito", sans-serif !important;
+		& span{
+			font-size: 73px;
+			margin: 0 0;
+		}
+	}
+}
+.svg-wrapper{
+	width: 50%;
+    height: 80%;
+    position: absolute;
+    right: 0%;
+    bottom: 0;
+    background-image: url(/assets/Asset-1.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .down-arrow{
     width: 100%;
-    // height: 10px;
-    // background-color: red;
     position: absolute;
-    bottom: 1%;
-
     display: flex;
     flex-direction: row;
     justify-content: center;
 
     & span{
     	font-size: 70px;
+    	cursor: pointer;
     }
+
+    animation: bounce 750ms infinite;
+}
+
+@keyframes bounce {
+  0% {bottom: 3%;}
+  50% {bottom: 1%;}
+  100% { bottom: 3%; }
+
 }
